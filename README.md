@@ -1,6 +1,6 @@
 
 ## Live Storybook
-[Storybook](https://submittable.github.io/component-library/?path=/docs/components-avatar--avatar-component)
+[Storybook](https://chan-fai-leung.github.io/Testing-this-fork/)
 
 ## Getting Start
 - install NVM and install node@16.15.1
