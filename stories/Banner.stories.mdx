@@ -1,0 +1,110 @@
+import { Title, Meta, Story, Canvas, ArgsTable, Stories, Source } from '@storybook/addon-docs'
+import Banner, { bannerTypes } from '../src/components/Banner/Banner'
+
+<Meta
+  title="MDX/Banner"
+  component={Banner}
+  argTypes={{
+    text: '',
+    type: {
+      options: [
+        bannerTypes.primary,
+        bannerTypes.secondary,
+        bannerTypes.warning,
+        bannerTypes.default,
+        bannerTypes.cancelled,
+      ],
+    },
+    children: '',
+    className: '',
+  }}
+/>
+
+export const Template = (args) => <Banner {...args} />
+
+<Title />
+
+Banner
+
+This component also export a set of color
+
+```javascript
+bannerTypes = {
+  cancelled: 'cancelled',
+  default: 'default',
+  primary: 'primary',
+  secondary: 'secondary',
+  warning: 'warning',
+}
+```
+
+```javascript
+<Banner text="Bolded banner text" type={bannerTypes.primary} children="Smaller banner text below bolded">
+```
+
+## Variants
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      color: bannerTypes.primary,
+      text: 'Bold banner',
+      children: 'Smaller banner',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary"
+    args={{
+      color: bannerTypes.secondary,
+      text: 'Bold banner',
+      children: 'Smaller banner',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Default"
+    args={{
+      color: avatarColors.default,
+      text: 'Bold banner',
+      children: 'Smaller banner',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Cancelled"
+    args={{
+      color: avatarColors.cancelled,
+      text: 'Bold banner',
+      children: 'Smaller banner',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Warning"
+    args={{
+      color: avatarColors.warning,
+      text: 'Bold banner',
+      children: 'Smaller banner',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Primary: {add description on usage}
+
+Secondary: {add description on usage}
+
+Default: {add description on usage}
+
+Cancelled: {add description on usage}
+
+Warning: {add description on usage}
+
+<ArgsTable />
