@@ -67,7 +67,7 @@
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build": "react-scripts build",
-    "build-storybook": "build-storybook -o docs-build",
+    "build-storybook": "build-storybook",
     "cm": "cz",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0 -- src/",
     "prepare": "husky install",
