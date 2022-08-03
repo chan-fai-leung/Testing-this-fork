@@ -24,10 +24,6 @@ export const Template = (args) => <Banner {...args} />
 
 <Title />
 
-Banner
-
-This component also export a set of color
-
 ```javascript
 bannerTypes = {
   cancelled: 'cancelled',
@@ -49,7 +45,7 @@ bannerTypes = {
     name="Primary"
     args={{
       color: bannerTypes.primary,
-      text: 'Bold banner',
+      text: 'primary example',
       children: 'Smaller banner',
     }}
   >
@@ -58,18 +54,8 @@ bannerTypes = {
   <Story
     name="Secondary"
     args={{
-      color: bannerTypes.secondary,
-      text: 'Bold banner',
-      children: 'Smaller banner',
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-  <Story
-    name="Default"
-    args={{
-      color: avatarColors.default,
-      text: 'Bold banner',
+      type: bannerTypes.secondary,
+      text: 'secondary example',
       children: 'Smaller banner',
     }}
   >
@@ -78,8 +64,8 @@ bannerTypes = {
   <Story
     name="Cancelled"
     args={{
-      color: avatarColors.cancelled,
-      text: 'Bold banner',
+      type: bannerTypes.cancelled,
+      text: 'cancelled example',
       children: 'Smaller banner',
     }}
   >
@@ -88,13 +74,23 @@ bannerTypes = {
   <Story
     name="Warning"
     args={{
-      color: avatarColors.warning,
-      text: 'Bold banner',
+      type: bannerTypes.warning,
+      text: 'warning example',
       children: 'Smaller banner',
     }}
   >
     {Template.bind({})}
   </Story>
+  <Story
+      name="Default"
+      args={{
+        type: bannerTypes.default,
+        text: 'default example',
+        children: 'Smaller banner',
+      }}
+    >
+      {Template.bind({})}
+    </Story>
 </Canvas>
 
 Primary: {add description on usage}
